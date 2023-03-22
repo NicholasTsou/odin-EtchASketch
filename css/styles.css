@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: antiquewhite;
+}
+.title-word{
+    animation: color-animation 12s linear infinite;
+}
+
+.word1{
+    --color-1: #8a2b2b;
+    --color-2: #3f9385;
+    --color-3: #6d377d;
+}
+
+.word2{
+    --color-1: #a3a909;
+    --color-2: #17486f;
+    --color-3: #7c9f22;
+}
+
+.word3{
+    --color-1: #b0731e;
+    --color-2: #06672f;
+    --color-3: #801d5a;
+}
+
+@keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* height: 100vh */
+}
+
+.title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 4.5vw;
+    text-transform: uppercase;
+    margin: 0;
+}
