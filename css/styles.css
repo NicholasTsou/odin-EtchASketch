@@ -62,7 +62,7 @@ body{
 }
 
 .etch{
-    height: 550px;
+    height: 500px;
     width: 750px;
     background-color: #e1cece;
     margin: auto;
@@ -84,6 +84,7 @@ body{
     align-items: center;
     margin: 0 auto;
     padding: 0 500px;
+    width: 900px;
 }
 
 .sketch p{
@@ -107,6 +108,11 @@ body{
     scale: 1.3;
     background-color: yellow;
     color:black;
+}
+
+#colorpicker{
+    border: none;
+    background-color: antiquewhite;
 }
 
 .mode{
