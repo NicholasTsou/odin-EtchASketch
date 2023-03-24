@@ -11,12 +11,14 @@ const grid = document.getElementById('grid-container');
 
 let cellSize;
 
+//creating a grid depending on the boxes making it a square
 function createGrid(boxes){
     let size = boxes * boxes;
 
     grid.style.setProperty('--gridRow', boxes);
     grid.style.setProperty('--gridCol', boxes);
 
+    //for loop the creates each individual div and names it cells
     for(let i = 0; i < size; i++){
         cellSize = document.createElement('div');
         
@@ -24,40 +26,50 @@ function createGrid(boxes){
     }
 };
 
+//create grid when page gets loaded
 function startingGrid(){
     createGrid(12);
 }
 
+//function to resetGrid
 function resetGrid(){
     grid.innerHTML = '';
 }
 
+//function to change grid to small
 smallBtn.addEventListener('click', () =>{
     resetGrid();
     createGrid(12);
 });
 
+//function to change grid to medium
 medBtn.addEventListener('click', () =>{
     resetGrid();
     createGrid(20);
 })
 
+//function to change grid to large
 largeBtn.addEventListener('click', () =>{
     resetGrid();
     createGrid(44);
 })
 
+//function to change color to black
 blackBtn.addEventListener('click', () =>{
     generateColor("black")
 })
 
+//function to change color to rainbow
 rainbowBtn.addEventListener('click', () =>{
     generateColor("rainbow");
 })
 
+//function to change color to color picker
 chooseBtn.addEventListener('click', () =>{
     generateColor("choose");
 })
+
+//function to erase the entire grid
 eraseBtn.addEventListener('click', () =>{
     let squares = document.querySelectorAll(".cells");
 
@@ -68,6 +80,8 @@ eraseBtn.addEventListener('click', () =>{
     });
 })
 
+//function to see what button was picked
+//and then set the mouse over color to that
 function generateColor(color){
     let squares = document.querySelectorAll(".cells");
 
@@ -95,16 +109,12 @@ function randomColor(){
     
 }
 
+//function that grabs whatever color was picked from color picker
 function pickColor(){
     let colorr = chooseBtn.value;
 
     return colorr;
 }
 
-
-
-
-
-
-
+//set starting grid
 startingGrid();
